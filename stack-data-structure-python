@@ -1,0 +1,25 @@
+class Stack:
+"""Simple Stack implementation using a Python list"""
+  def __init__(self,items):
+    self.items = items.copy
+  
+  def push(self,item):
+    self.items.append(item)
+  
+  def pull(self):
+    return self.items.pop(-1) if len(self.items) != 0 else None
+
+  def display(self):
+    return self.items if len(self.items) != 0 else None
+
+  def peek(self):
+    return self.items[-1] if len(self.items) != 0 else None
+if __name__ == '__main__'
+  for i in range(4):
+        stack.push(i)
+
+    stack.push("new")
+    stack.pop()
+
+    print("Top item:", stack.peek())
+    print("Stack contents:", stack.display())
